@@ -26,5 +26,6 @@
   "homepage": "https://github.com/jrmykolyn/familiar#readme",
   "dependencies": {
     "simple-git": "^1.67.0"
-  }
+  },
+  preferGlobal: true
 }
