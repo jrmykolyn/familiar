@@ -11,17 +11,20 @@
     "url": "git+https://github.com/jrmykolyn/familiar.git"
   },
   "keywords": [
-      "familiar",
-      "git",
-      "cli",
-      "familiar-cli",
-      "git-familiar",
-      "git-cli"
+    "familiar",
+    "git",
+    "cli",
+    "familiar-cli",
+    "git-familiar",
+    "git-cli"
   ],
   "author": "Jesse R Mykolyn",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jrmykolyn/familiar/issues"
   },
-  "homepage": "https://github.com/jrmykolyn/familiar#readme"
+  "homepage": "https://github.com/jrmykolyn/familiar#readme",
+  "dependencies": {
+    "simple-git": "^1.67.0"
+  }
 }
