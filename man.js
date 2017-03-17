@@ -1,4 +1,5 @@
-console.log( 'INSIDE `man.js`' );
+#! /usr/bin/env node
+
 
 // --------------------------------------------------
 // DECLARE VARS
