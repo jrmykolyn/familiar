@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/jrmykolyn/familiar#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "simple-git": "^1.67.0"
   },
   "preferGlobal": true
