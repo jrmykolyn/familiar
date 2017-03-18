@@ -17,6 +17,11 @@ switch ( args[ 0 ] ) {
         console.log( package.version );
 
         break;
+    case 'help':
+        console.log( 'COMING SOON!');
+
+        break;
     default:
         console.log( 'Whoops! Looks like you ran the `familiar` command with missing or invalid arguments!' );
+        console.log( 'Run `familiar help` to see a list of available commands/options.' );
 }
