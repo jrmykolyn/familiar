@@ -32,5 +32,8 @@
     "bluebird": "^3.5.0",
     "simple-git": "^1.67.0"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "devDependencies": {
+    "colors": "^1.1.2"
+  }
 }
