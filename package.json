@@ -30,10 +30,9 @@
   "homepage": "https://github.com/jrmykolyn/familiar#readme",
   "dependencies": {
     "bluebird": "^3.5.0",
+    "colors": "^1.1.2",
     "simple-git": "^1.67.0"
   },
   "preferGlobal": true,
-  "devDependencies": {
-    "colors": "^1.1.2"
-  }
+  "devDependencies": {}
 }
