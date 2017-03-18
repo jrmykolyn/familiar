@@ -2,9 +2,10 @@
 
 
 // --------------------------------------------------
-// DECLARE MODULES
+// IMPORT MODULES
 // --------------------------------------------------
 // Project
+var utils = require( './lib/utils' );
 var main = require( './lib/main' );
 
 
