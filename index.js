@@ -64,7 +64,7 @@ function printCommandError( errorType ) {
 main.init()
     .then(
         ( data ) => {
-            config = data;
+            config = JSON.parse( data );
             parseArgs( args );
         },
         ( err ) => { console.log( err ); }
