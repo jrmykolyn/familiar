@@ -1,5 +1,6 @@
 module.exports = {
-  commit: {
-    delimiter: " ||| "
-  }
+    commit: {
+        insertBranchName: true,
+        delimiter: " | "
+    }
 };
