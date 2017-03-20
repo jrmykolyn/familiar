@@ -1,6 +1,6 @@
 {
   "name": "familiar",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Familiar is a command line-based 'helper' for Git.",
   "main": "index.js",
   "scripts": {
