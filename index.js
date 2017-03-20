@@ -7,6 +7,7 @@
 // Project
 var utils = require( './lib/utils' );
 var main = require( './lib/main' );
+var commands = require( './lib/commands' );
 
 
 // --------------------------------------------------
@@ -31,21 +32,16 @@ function parseArgs( args ) {
         return; /// TEMP
     }
 
-    if ( !validateCommand( command, commandWhitelist) ) {
-        console.log( `Whoops! The \`${command}\` command is not currently supported by ${PACKAGE_NAME}.`.error );
-        return; /// TEMP
-        /// TODO[@jrmykolyn] - Implement 'fallthrough' to native Git command(s).
-    }
-
     applyCommand( command, args.slice( 1 ) );
 }
 
-function validateCommand( command, whitelist ) {
-    return whitelist.includes( command );
-}
-
 function applyCommand( command, args ) {
-    /// TODO[@jrmykolyn] - Build out logic for applying command(s).
+    if ( command in commands ) {
+        commands[ command ]( args, JSON.parse( config ) ); /// FIXME[@jrmykolyn] - Should not have to pass `config` into `JSON.parse()` here...`
+    } else {
+        console.log( `Whoops! The \`${command}\` command is not currently supported by ${PACKAGE_NAME}.`.error );
+        /// TODO[@jrmykolyn] - Throw error or 'fallthrough' to native Git command.
+    }
 }
 
 function printCommandError( errorType ) {
