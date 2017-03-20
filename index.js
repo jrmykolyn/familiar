@@ -37,7 +37,7 @@ function parseArgs( args ) {
 
 function applyCommand( command, args ) {
     if ( command in commands ) {
-        commands[ command ]( args, JSON.parse( config ) ); /// FIXME[@jrmykolyn] - Should not have to pass `config` into `JSON.parse()` here...`
+        commands[ command ]( args, config );
     } else {
         console.log( `Whoops! The \`${command}\` command is not currently supported by ${PACKAGE_NAME}.`.error );
         /// TODO[@jrmykolyn] - Throw error or 'fallthrough' to native Git command.
@@ -63,8 +63,9 @@ function printCommandError( errorType ) {
 // --------------------------------------------------
 main.init()
     .then(
-        ( data ) => {
-            config = JSON.parse( data );
+        ( configData ) => {
+            config = configData;
+
             parseArgs( args );
         },
         ( err ) => { console.log( err ); }
