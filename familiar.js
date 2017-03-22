@@ -6,26 +6,22 @@
 // --------------------------------------------------
 // Project
 const utils = require( './lib/utils' );
+const familiarCommands = require( './lib/familiar-commands' );
 
 
 // --------------------------------------------------
 // DECLARE VARS
 // --------------------------------------------------
-const package = require( './package.json' );
 const args = process.argv.slice( 2 ) || [];
+const command = args[ 0 ];
 
 
 // --------------------------------------------------
 // PARSE ARGS
 // --------------------------------------------------
-switch ( args[ 0 ] ) {
-    case '-v':
-    case '--version':
-        console.log( package.version );
-
-        break;
-    case 'help':
-        console.log( 'COMING SOON!');
+switch ( command in familiarCommands ) {
+    case true:
+        familiarCommands[ args[ 0 ] ]( args.slice( 1 ) );
 
         break;
     default:
