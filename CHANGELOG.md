@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - ...
 
-## [0.0.13] - 2017-03-21
+## [0.0.13] - 2017-03-22
 ### Added
 - Added 'CHANGELOG.md' to project.
 
