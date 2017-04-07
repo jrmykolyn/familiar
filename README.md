@@ -8,3 +8,4 @@
 - Add 'prepend branch name to commit message' functionality.
 - Add 'excludeBranches' functionality (eg. *do not* prepend branch name).
 - Add 'prompt `npm install` if required' functionality.
+- Update 'commit' command to throw error or warning if message starts with current branch name.
