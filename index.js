@@ -1,14 +1,13 @@
 #! /usr/bin/env node
 
-
 // --------------------------------------------------
 // IMPORT MODULES
 // --------------------------------------------------
 // Project
-var utils = require( './lib/utils' );
+require( './lib/setup' );
+
 var main = require( './lib/main' );
 var commands = require( './lib/commands' );
-
 
 // --------------------------------------------------
 // DECLARE VARS
