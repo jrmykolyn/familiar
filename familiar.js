@@ -1,20 +1,18 @@
 #! /usr/bin/env node
 
-
 // --------------------------------------------------
 // IMPORT MODULES
 // --------------------------------------------------
 // Project
-const utils = require( './lib/utils' );
-const familiarCommands = require( './lib/familiar-commands' );
+require( './lib/setup' );
 
+const familiarCommands = require( './lib/familiar-commands' );
 
 // --------------------------------------------------
 // DECLARE VARS
 // --------------------------------------------------
 const args = process.argv.slice( 2 ) || [];
 const command = args[ 0 ];
-
 
 // --------------------------------------------------
 // PARSE ARGS
