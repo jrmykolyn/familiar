@@ -6,7 +6,7 @@
 // Project
 require( './lib/setup' );
 
-const familiarCommands = require( './lib/familiar-commands' );
+const familiar = require( './lib/familiar' );
 
 // --------------------------------------------------
 // DECLARE VARS
@@ -17,9 +17,9 @@ const command = args[ 0 ];
 // --------------------------------------------------
 // PARSE ARGS
 // --------------------------------------------------
-switch ( command in familiarCommands ) {
+switch ( command in familiar ) {
     case true:
-        familiarCommands[ args[ 0 ] ]( args.slice( 1 ) );
+        familiar[ args[ 0 ] ]( args.slice( 1 ) );
 
         break;
     default:

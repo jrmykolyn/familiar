@@ -7,7 +7,7 @@
 require( './lib/setup' );
 
 var main = require( './lib/main' );
-var commands = require( './lib/commands' );
+var gitf = require( './lib/gitf' );
 
 // --------------------------------------------------
 // DECLARE VARS
@@ -35,8 +35,8 @@ function parseArgs( args ) {
 }
 
 function applyCommand( command, args ) {
-    if ( command in commands ) {
-        commands[ command ]( args, config );
+    if ( command in gitf ) {
+        gitf[ command ]( args, config );
     } else {
         console.log( `Whoops! The \`${command}\` command is not currently supported by ${PACKAGE_NAME}.`.error );
         /// TODO[@jrmykolyn] - Throw error or 'fallthrough' to native Git command.
@@ -60,12 +60,11 @@ function printCommandError( errorType ) {
 // --------------------------------------------------
 // INITIALIZE
 // --------------------------------------------------
-main.init()
-    .then(
-        ( configData ) => {
-            config = configData;
+main.init().then(
+    ( configData ) => {
+        config = configData;
 
-            parseArgs( args );
-        },
-        ( err ) => { console.log( err ); }
-    );
+        parseArgs( args );
+    },
+    ( err ) => { console.log( err ); }
+);
