@@ -4,7 +4,8 @@
   "description": "Familiar is a command line-based 'helper' for Git.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./lib/**/*.js"
   },
   "bin": {
     "familiar": "./familiar.js",
