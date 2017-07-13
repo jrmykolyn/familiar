@@ -39,6 +39,7 @@
   },
   "preferGlobal": true,
   "devDependencies": {
+    "ava": "^0.20.0",
     "eslint": "^4.2.0"
   }
 }
