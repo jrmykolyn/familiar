@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [0.2.0] - 2017-07-14
 ### Added
 - Added [minimist](https://www.npmjs.com/package/minimist) to `dependencies`.
 - Added [sfco-literati](https://www.npmjs.com/package/sfco-literati) to `dependencies`.
@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Added [del](https://www.npmjs.com/package/del) to `devDependencies`.
 - Added `familiar` command tests (`test/familiar.test.js`).
 - Added `package-lock.json` file to repo.
-- Added [Travis CI](https://travis-ci.org/) config. file to repo.
+- Added [Travis CI](https://travis-ci.org/) config. file to repo. Added 'build status' badge to `README.md`.
 
 ### Changed
 - Updated `familiar` to parse options using `minimist` package, pass resulting options to command.
