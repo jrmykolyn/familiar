@@ -12,7 +12,7 @@ import * as familiar from '../lib/familiar';
 // DEFINE TESTS
 // --------------------------------------------------
 test.after( () => {
-    del( [ `${__dirname}/tmp/*`, `!${__dirname}/tmp/README.md` ] );
+    del( [ `${__dirname}/tmp/*`, `${__dirname}/tmp/.[^.]*`, `!${__dirname}/tmp/README.md` ] );
 } );
 
 test( 'Testing `familiar[ "-v" ]()`', ( t ) => {
@@ -30,8 +30,12 @@ test( 'Testing `familiar[ "--version" ]()`', ( t ) => {
 } );
 
 test( 'Testing `familiar[ "init" ]()`', async ( t ) => {
-    // Write file to `./tmp/` dir.
-    let result = await familiar[ 'init' ]( { outDir: `${__dirname}/tmp` } );
+    t.plan( 2 );
 
-    t.true( result );
+    // Write file(s) to `./tmp/` dir.
+    let globalConfigResult = await familiar[ 'init' ]( { global: true, outDir: `${__dirname}/tmp` } );
+    let localConfigResult = await familiar[ 'init' ]( { outDir: `${__dirname}/tmp` } );
+
+    t.true( globalConfigResult );
+    t.true( localConfigResult );
 } );
