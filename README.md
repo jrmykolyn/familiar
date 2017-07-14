@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jrmykolyn/familiar.svg?branch=master)](https://travis-ci.org/jrmykolyn/familiar)
+
 # Familiar
 
 ## TODO
